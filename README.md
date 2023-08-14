@@ -17,18 +17,10 @@ yarn start
 
 因公司的自研产品涉及到BI模块，因此数据大屏展示的需求孕育而生（数据大屏需求已经完成）。
 
-下面是本人针对这个数据大屏需求前期做的一些探索实践，数据也是mock的。
-
-![bi](https://hzzlyxx.oss-cn-beijing.aliyuncs.com/blog/bi/img2.gif)
-
 
 ## 技术选型
 
-- React 全家桶（React-Router、React-Redux、React Hooks）
-- Webpack 编译打包
-- Echarts 图表组件
-- Socket.IO 即时通讯、通知与消息推送
-- Grid 网格布局
+使用帆软工具
 
 ## 系统搭建
 
@@ -57,52 +49,12 @@ yarn start
 
 数据大屏的核心就是数据的拼接，具体到展示层可以归纳成数据块的拼接。这里我们采用通用的尺寸1920*108(16:9)。尺寸确立后，接下来要对展示层进行布局和页面的划分。这里的划分，主要根据我们之前定好的业务指标进行，核心业务指标安排在中间位置、占较大面积；其余的指标按优先级依次在核心指标周围展开。一般把有关联的指标让其相邻或靠近，把图表类型相近的指标放一起，这样能减少观者认知上的负担并提高信息传递的效率。
 
-对于这种块状(网格)布局，我们就可以使用我们强大的 CSS 布局方案 -- **Grid**。它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。
 
-安利一个grid 布局可视化设计工具 -- [CSS Grid Generator](https://cssgrid-generator.netlify.com/)。可以使用它生成对应的代码，帮助咱们快速布局。
-
-![grid](https://hzzlyxx.oss-cn-beijing.aliyuncs.com/blog/bi/img2.png)
 
 ### 项目结构
 
-聊完这些通用知识我们就可以上手开发了。
 
-我这里使用了我自己开发的脚手架（hzzly-cli）来生成react项目环境。
-
-> 有兴趣了解脚手架开发的可以看我这篇文章[动手开发一个自己的项目脚手架](http://hjingren.cn/2019/07/19/%E5%8A%A8%E6%89%8B%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6/)
-
-项目结构如下：
-
-```tree
-├── src
-│   ├── assets // 资源目录
-│   ├── components // 公共组件目录
-│   │   ├── Card // Card组件
-│   │   ├── Charts // 图表组件目录
-│   │   │   ├── Bar // 柱状图
-│   │   │   ├── ChinaMap // 中国地图
-│   │   │   ├── Funnel // 漏斗图
-│   │   │   ├── Line // 折线图
-│   │   │   ├── Pie // 饼图
-│   │   │   └── lib // 基础图表组件
-│   │   ├── ScrollNumber // 滚动数字组件
-│   │   └── SvgIcon // Icon组件
-│   ├── global.scss
-│   ├── index.js
-│   ├── pages // 分块结构目录
-│   ├── router // 路由
-│   ├── store
-│   │   ├── actions
-│   │   ├── index.js
-│   │   ├── reducers
-│   │   ├── sagas
-│   │   └── types.js
-│   └── utils
-│       ├── genChartData.js
-│       ├── genMapData.js
-│       ├── socket.js
-│       └── util.js
-```
+帆软的fr 决策报表
 
 ## 知识点
 
