@@ -334,18 +334,3 @@ function toThousands(val) {
 - [vue-particle-line](https://github.com/hzzly/vue-particle-line)
 - [react-particle-line](https://github.com/hzzly/react-particle-line)
 
-## 说明
-
-1、项目框架目录结构采用笔者自己搭建的webpack环境：[webpack-template](https://github.com/hzzly/webpack-template)
-
-2、关于适配和兼容性暂时还未完善，如果后期有时间会慢慢去完善
-
-3、此项目为笔者调研时的实践，因为时间有限，一些功能还不善，设计和布局都是自己的一些想象与参考
-
-4、此项目作为开源学习使用，谢绝用于商业应用
-
-## 参考
-
-- [超全面设计指南：如何做大屏数据可视化设计？](http://www.woshipm.com/pd/1782868.html)
-- [五个方面，聊聊大数据可视化的初体验](http://www.woshipm.com/data-analysis/2279512.html)
-- [一个炫酷大屏展示页的打造过程](https://juejin.im/post/5a20fe96f265da431120025b)
